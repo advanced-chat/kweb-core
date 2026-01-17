@@ -1,31 +1,7 @@
 # Kweb - A Kotlin web framework
 
-<div align="center">
-  <a href="https://github.com/kwebio/kweb-core/actions/workflows/build.yml">
-    <img src="https://img.shields.io/github/actions/workflow/status/kwebio/kweb-core/build.yml?branch=master&label=tests&style=flat-square&logo=github%20actions" alt="continuous integration status" >
-  </a>
-  <a href="https://matrix.to/#/#kweb:matrix.org">
-    <img src="https://img.shields.io/badge/chat-matrix-blue?style=flat-square&logo=matrix&color=0B9CD6" alt="matrix" >
-  </a>
-  <a href="https://docs.kweb.io/book/gettingstarted.html">
-    <img src="https://img.shields.io/maven-central/v/io.kweb/kweb-core?style=flat-square&logo=maven&label=kweb-core&color=374991" >
-  <a href="https://github.com/kwebio/kweb-core/blob/master/LICENSE">
-    <img src="https://img.shields.io/github/license/kwebio/kweb-core?style=flat-square&logo=gnu&color=3DA751" >
-  </a>
-  <a href="https://twitter.com/kwebio">
-    <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/kwebio?logo=twitter&color=1DA1F2&style=flat-square&label=%40kwebio" >
-  </a>
-</div>
+A fork of https://github.com/kwebio/kweb-core
 
-## Notice of Project Status (June 2024)
-
-Due primarily to recent [changes](https://www.reddit.com/r/java/comments/1dkgh85/psa_maven_central_publishing_requires_token_now/) in Sonatype's deployment requirements, and persistent other [headaches](https://www.reddit.com/r/Kotlin/comments/y042g1/rant_gradle_is_an_embarrassment_to_the_javakotlin/) with JVM ecosystem tooling, I'm no longer able to actively support Kweb. 
-
-The last straw was Sonatype breaking my automatic deployment process by changing how it's authenticated, and [apparently](https://help.sonatype.com/en/user-tokens.html) requiring a paid upgrade to their Pro service to fix it. Over the past two years, most of the time I've spent on Kweb has been dealing with tooling regressions rather than improving the software.
-
-This decision wasn't easy, but it’s become untenable for me to continue maintaining the framework given these challenges.
-
-If you are interested in taking over the project or contributing to its development, please feel free to fork the repository. If you need to contact me I'm @sanity on [X](https://x.com/sanity) and [Reddit](https://reddit.com/u/sanity).
 
 ## Quick Start
 
@@ -40,10 +16,6 @@ Kweb is designed to make it easy for developers to create modern websites withou
 ## How does it work?
 
 Kweb is a remote interface for a web browser's DOM (Document Object Model). With Kweb, you can create and manipulate DOM elements, and listen for and handle events, all using an intuitive Kotlin DSL that mirrors the structure of the HTML being created. Kweb is built on the Ktor framework, which handles HTTP, HTTPS, and WebSocket transport, and is optimized to minimize latency and resource usage on both the server and browser.
-
-### Note on Memory Leak Issue
-
-We have identified a memory leak issue that may affect users when using the `InputElement` class, we're working on a [fix](https://github.com/kwebio/kweb-core/pull/611) but can't make any promises if/when it will be completed. We recommend that you run a memory profiler to see if you're affected.
 
 ## Example
   
@@ -65,3 +37,4 @@ fun main() {
         }
     }
 }
+
